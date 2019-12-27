@@ -6,7 +6,7 @@
 /*   By: esnowpea <esnowpea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/26 13:15:35 by esnowpea          #+#    #+#             */
-/*   Updated: 2019/12/27 18:27:27 by esnowpea         ###   ########.fr       */
+/*   Updated: 2019/12/27 18:29:16 by esnowpea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int main(int argc, char **argv)
 	int fd;
 	char *line;
 
-	if (argc != 1)
+	if (argc != 2)
 	{
 		ft_putstr("usage: ./gnl [file]\n");
 		return (0);
