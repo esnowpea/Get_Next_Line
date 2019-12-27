@@ -10,7 +10,8 @@ Disclaimer: There are so many easier methods of doing this by using standard C f
 
 ## Compiling
 
-Run make, an executable called gnl should compile directly
+Run `make`, an executable called `gnl` should compile directly.
 
 ## Usage
 
+`./gnl [file.txt]`
