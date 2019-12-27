@@ -6,7 +6,7 @@
 #    By: esnowpea <esnowpea@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/02 13:56:52 by esnowpea          #+#    #+#              #
-#    Updated: 2019/12/27 18:15:39 by esnowpea         ###   ########.fr        #
+#    Updated: 2019/12/27 20:27:12 by esnowpea         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ HEAD = ./inc/
 
 .PHONY: all clean fclean re
 
-all: $(NAME)
+all: create_obj $(NAME)
 
 $(NAME): $(addprefix $(OBJ), $(OBJ_NAME))
 	@make -C ./libft
@@ -45,8 +45,12 @@ $(NAME): $(addprefix $(OBJ), $(OBJ_NAME))
 $(OBJ)%.o: $(SRC)%.c
 	@$(CC) $(CFLAGS) -I $(HEAD) -I $(LDHEAD) -o $@ -c $<
 
+create_obj:
+	@mkdir -p $(OBJ)
+
 clean:
 	@rm -rf $(addprefix $(OBJ), $(OBJ_NAME))
+	@rm -rf $(OBJ)
 	@make -C ./libft clean
 
 fclean: clean

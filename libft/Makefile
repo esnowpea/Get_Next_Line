@@ -6,7 +6,7 @@
 #    By: esnowpea <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/07/15 12:48:11 by esnowpea          #+#    #+#              #
-#    Updated: 2019/09/16 19:18:42 by esnowpea         ###   ########.fr        #
+#    Updated: 2019/12/27 20:21:42 by esnowpea         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -88,7 +88,7 @@ OBJ = ./obj/
 
 HEAD = ./inc/
 
-all: $(NAME)
+all: create_obj $(NAME)
 
 $(NAME): $(addprefix $(OBJ), $(OBJ_NAME))
 	@ar rc $@ $^
@@ -98,8 +98,12 @@ $(NAME): $(addprefix $(OBJ), $(OBJ_NAME))
 $(OBJ)%.o: $(SRC)%.c
 	@$(CC) $(CFLAGS) -I $(HEAD) -o $@ -c $<
 
+create_obj:
+	@mkdir -p $(OBJ)
+
 clean:
 	@rm -rf $(addprefix $(OBJ), $(OBJ_NAME))
+	@rm -rf $(OBJ)
 
 fclean: clean
 	@rm -f $(NAME)
