@@ -6,11 +6,11 @@
 #    By: esnowpea <esnowpea@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/02 13:56:52 by esnowpea          #+#    #+#              #
-#    Updated: 2019/12/27 17:57:41 by esnowpea         ###   ########.fr        #
+#    Updated: 2019/12/27 18:15:39 by esnowpea         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = get_next_line
+NAME = gnl
 
 CC = gcc
 
