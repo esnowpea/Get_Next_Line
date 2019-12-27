@@ -6,7 +6,7 @@
 /*   By: esnowpea <esnowpea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/26 13:15:35 by esnowpea          #+#    #+#             */
-/*   Updated: 2019/12/27 17:49:33 by esnowpea         ###   ########.fr       */
+/*   Updated: 2019/12/27 18:22:46 by esnowpea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int main(int argc, char **argv)
 
 	if (argc != 1)
 	{
-		ft_putstr("usage: ./get_next_line [file]\n");
+		ft_putstr("usage: ./gnl [file]\n");
 		return (0);
 	}
 	fd = open(argv[1], O_RDONLY);
